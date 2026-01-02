@@ -1,0 +1,6 @@
+{%- for fs_mod in [ 'cifs', 'btrfs', 'smb', 'autofs', 'dlm', 'fuse', 'nls', 'fat', 'isofs', 'cachefiles', 'ufs', '9p', 'nfsd', 'ceph' ] | sort %}
+# CIS: Ensure {{ fs_mod }} kernel module is not available
+blacklist {{ fs_mod }}
+install {{ fs_mod }} /bin/false
+
+{% endfor %}

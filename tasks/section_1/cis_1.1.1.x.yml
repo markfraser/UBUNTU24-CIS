@@ -342,3 +342,12 @@
       when: discovered_fs_modules_loaded.stdout | length > 0
       ansible.builtin.import_tasks:
         file: warning_facts.yml
+
+    - name: "Remediate filesystem modules"
+      when: discovered_fs_modules_loaded.stdout | length > 0
+      ansible.builtin.template:
+        src: /etc/disable-fs.conf.j2
+        dest: /etc/modprobe.d/disable-fs.conf
+        owner: root
+        group: root
+        mode: '0644'

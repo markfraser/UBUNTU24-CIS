@@ -894,13 +894,13 @@ ubtu24cis_sshd_max_sessions: "{{ ubtu24cis_sshd_default_max_sessions }}"
 # If an USER@HOST format will be used, the specified user will be allowed only on that particular host.
 # The allow/deny directives process order: DenyUsers, AllowUsers, DenyGroups, AllowGroups.
 # For more info, see https://linux.die.net/man/5/sshd_config
-ubtu24cis_sshd_allow_users: ""
+ubtu24cis_sshd_allow_users: "ubuntu ansible deployer"
 # (String) This variable, if specified, configures a list of GROUP name patterns, separated by spaces, to allow SSH access
 # for users whose primary group or supplementary group list matches one of the patterns. This is done
 # by setting the value of `AllowGroups` option in `/etc/ssh/sshd_config` file.
 # The allow/deny directives process order: DenyUsers, AllowUsers, DenyGroups, AllowGroups.
 # For more info, https://linux.die.net/man/5/sshd_config
-ubtu24cis_sshd_allow_groups: ""
+ubtu24cis_sshd_allow_groups: "ubuntu ansible deployment"
 # This variable, if specified, configures a list of USER name patterns, separated by spaces, to prevent SSH access
 # for users whose user name matches one of the patterns. This is done
 # by setting the value of `DenyUsers` option in `/etc/ssh/sshd_config` file.
@@ -1182,7 +1182,7 @@ ubtu24cis_max_log_file_size: 10
 # - `rotate`: the log file is rotated (archived) and a new empty log file is created;
 # - `keep_logs`: the system attempts to keep as many logs as possible without violating disk space constraints.
 # CIS prescribes the value `keep_logs`.
-ubtu24cis_auditd_max_log_file_action: keep_logs
+ubtu24cis_auditd_max_log_file_action: rotate
 
 ## Control 6.2.3.3
 # This variable determines how the system should act in case of issues with disk
