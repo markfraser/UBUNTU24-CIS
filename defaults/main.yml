@@ -276,8 +276,8 @@ ubtu24cis_rule_2_2_6: true
 # Ensure time synchronization is in use
 ubtu24cis_rule_2_3_1_1: true
 # Configure systemd-timesyncd
-ubtu24cis_rule_2_3_2_1: true
-ubtu24cis_rule_2_3_2_2: true
+ubtu24cis_rule_2_3_2_1: false
+ubtu24cis_rule_2_3_2_2: false
 # Configure Chrony
 ubtu24cis_rule_2_3_3_1: true
 ubtu24cis_rule_2_3_3_2: true
